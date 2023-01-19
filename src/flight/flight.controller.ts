@@ -4,7 +4,9 @@ import { FlightDTO } from './dto/flight.dto';
 import { Param, Put, Delete } from '@nestjs/common/decorators';
 import { PassengerService } from '../passenger/passenger.service';
 import { HttpException } from '@nestjs/common/exceptions';
+import { ApiTags } from '@nestjs/swagger';
 
+@ApiTags('flights')
 @Controller('api/v1/flight')
 export class FlightController {
   constructor(
