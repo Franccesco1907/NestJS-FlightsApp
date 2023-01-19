@@ -16,12 +16,13 @@ async function bootstrap() {
     .setTitle('SuperFlight API')
     .setDescription('Scheduled Flights App')
     .setVersion('1.0.0')
+    .addBearerAuth()
     .build();
   const document = SwaggerModule.createDocument(app, options);
 
   SwaggerModule.setup('/api/docs', app, document, {swaggerOptions: {
     filter: true // To have a searcher bar
   }});
-  await app.listen(3000);
+  await app.listen(process.env.PORT || 3000);
 }
 bootstrap();
