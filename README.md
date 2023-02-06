@@ -21,7 +21,7 @@
 
 ## Description
 
-Flights App to remember microservices in NestJS.
+Flights App to remember apis in NestJS.
 
 ## Installation
 
